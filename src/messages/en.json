@@ -1,0 +1,223 @@
+{
+  "nav": {
+    "langToggle": "עב",
+    "cta": "Let's Talk"
+  },
+  "hero": {
+    "eyebrow": "Roy Meroz — Living and breathing Tuscany",
+    "headlineLine1": "The Italy trip",
+    "headlineLine2": "you've dreamed of.",
+    "headlineAccent": "",
+    "headlineItalic": "Planned for you.",
+    "sub": "I've been living and studying in Tuscany for three years. The places I find — family wineries, villages hidden from the tourist trail, restaurants no guidebook mentions — that's what I bring to your trip.",
+    "ctaPrimary": "See the packages",
+    "or": "or",
+    "ctaSecondary": "Not sure yet — let's talk",
+    "waMsg": "Hi Roy, I'm not sure yet which option suits me - can we talk?"
+  },
+  "about": {
+    "label": "About Me",
+    "quote": "\"I'm not a tour guide. I'm someone who lives here, loves this place, and wants you to experience it the way it deserves.\"",
+    "p1": "My name is Roy Meroz. I've been living and studying medicine in Italy for three years. In my free time I pursue a hobby that became a calling — finding the less-visited corners of Tuscany and northern Italy.",
+    "p2": "Towns frozen in time. Panoramic lake views. Generous wineries with tastings paired with local cheeses and cured meats. Restaurants where I've eaten real Tuscan food — not what's served to tourists.",
+    "p3": "All of this is what I bring to planning your trip.",
+    "sig": "— Roy Meroz | רועי מרוז, Tuscany 🍷"
+  },
+  "services": {
+    "label": "Our Packages",
+    "headline1": "Choose what",
+    "headlineItalic": "works for you",
+    "intro": "Not sure which fits? Send a message and Roy will walk you through all options. No commitment.",
+    "howItWorks": "How it works ←",
+    "packages": [
+      {
+        "badge": "Most Popular",
+        "icon": "🗺️",
+        "title": "Full Trip Planning",
+        "desc": "From understanding your needs to an approved, booked itinerary — everything handled. You leave with everything ready.",
+        "includes": [
+          "Personal questionnaire + two Zoom calls",
+          "Detailed day-by-day itinerary",
+          "Restaurant, winery & activity bookings",
+          "Area info files + recommendations",
+          "Full accompaniment during the trip 🍷"
+        ],
+        "price": "€195",
+        "priceDir": "ltr",
+        "priceUnit": "for a 7-day trip",
+        "priceAlt": "5 days — €165 | Each extra day — €15",
+        "steps": [
+          "Choose package & pay deposit",
+          "Fill personal questionnaire & schedule first Zoom",
+          "First Zoom — introductions, approve general direction",
+          "Receive info files + planned itinerary, schedule second call",
+          "Second Zoom — review itinerary, changes, final approval",
+          "Bookings + departure + accompaniment throughout"
+        ],
+        "cta": "Let's start",
+        "waMsg": "Hi Roy, I'm interested in Full Trip Planning to Tuscany 🍷"
+      },
+      {
+        "icon": "☕",
+        "title": "Consultation Call",
+        "desc": "A full picture of Tuscany — recommendations, region breakdown, and a trip framework. You take it from there.",
+        "includes": [
+          "One Zoom call",
+          "Detailed recommendations tailored to you",
+          "Trip framework / outline",
+          "Full breakdown of regions"
+        ],
+        "price": "€80",
+        "priceDir": "ltr",
+        "priceUnit": "per consultation 🥂",
+        "steps": [
+          "Send a message & schedule the Zoom call",
+          "One Zoom call — questions, recommendations, building a framework",
+          "You continue planning independently with all the tools you received"
+        ],
+        "cta": "Book a call",
+        "waMsg": "Hi Roy, I'd like to book a consultation call ☕"
+      },
+      {
+        "icon": "🏨",
+        "title": "Existing Trip Advisory",
+        "desc": "Already have an itinerary but something's missing? Roy reviews it, flags the gaps, and adds the places that will upgrade it.",
+        "includes": [
+          "Review & critique of your existing itinerary",
+          "Recommendations to upgrade & fill gaps",
+          "Hidden gems no guidebook mentions"
+        ],
+        "price": "€95",
+        "priceDir": "ltr",
+        "priceUnit": "for existing trip 🍷",
+        "steps": [
+          "Send Roy your existing itinerary before the call",
+          "Zoom call — go through itinerary, critique, upgrades, add hidden spots",
+          "You leave with an upgraded itinerary"
+        ],
+        "cta": "Send your itinerary",
+        "waMsg": "Hi Roy, I'd like advisory for my existing trip 🏨"
+      }
+    ],
+    "addons": [
+      {
+        "title": "Organized Route Map",
+        "desc": "Visual map of all stops, order, distances",
+        "price": "+€30"
+      },
+      {
+        "title": "Single Attraction Booking",
+        "desc": "Just need one booking? That works too",
+        "price": "+€5"
+      }
+    ]
+  },
+  "why": {
+    "label": "Why Meroz In Italia",
+    "headline1": "More than a travel agent.",
+    "headlineItalic": "The local who became a friend.",
+    "cards": [
+      {
+        "icon": "🗺️",
+        "title": "Real Local Knowledge",
+        "text": "Roy doesn't plan from a screen. He lives in Tuscany and finds the places you can't Google."
+      },
+      {
+        "icon": "✍️",
+        "title": "Fully Personalized",
+        "text": "Every trip built from scratch around who you are. No two trips alike."
+      },
+      {
+        "icon": "🤝",
+        "title": "Full Support",
+        "text": "From first call until you're home — you're never alone. Roy is available during the trip too."
+      },
+      {
+        "icon": "🍷",
+        "title": "Places With No Guidebook",
+        "text": "Family wineries, villages frozen in time, local chefs — the corners Roy finds for you."
+      }
+    ]
+  },
+  "testimonials": {
+    "label": "What People Say",
+    "headline1": "Clients who came back",
+    "headlineItalic": "and can't stop talking about it",
+    "readMore": "Read more",
+    "readLess": "Less",
+    "reviews": [
+      {
+        "quote": "We traveled as 6 people — 4 days in Tuscany and 2 in Florence — and the decision to go with Roy Meroz was one of the best we made. He built us a precise, smooth itinerary that balanced attractions, great food, scenery and genuine downtime with no stress. Beyond the planning, he was available throughout the trip: answered questions, gave extra recommendations, and gave us tips that upgraded every single day. We felt like we had someone truly looking out for us. If you are planning a trip and want peace of mind and an itinerary that actually works — do not think twice.",
+        "author": "Eden Patel",
+        "city": ""
+      },
+      {
+        "quote": "I want to leave a glowing recommendation for Roy Meroz who planned our trip to Tuscany, Florence and Umbria. Thanks to him we had a dream week, planned so cleverly that it saved us enormous energy and took us to places we never would have found on our own. A boutique hotel in San Gimignano, a day in Florence with Roy himself, truffle hunting, Christmas markets, breathtaking views, a winery in Umbria, and a stunning boutique hotel on Lake Bolsena. Throughout it all Roy was present, warm, attentive to every detail, and open to last-minute changes. If you are planning a trip to Tuscany — do not hesitate. It is simply worth it.",
+        "author": "Carmi Shimron",
+        "city": ""
+      },
+      {
+        "quote": "If you are planning a Tuscany trip and want an honest recommendation — this is for you. It took us a while to hire a professional planner because we thought we could do it ourselves. But then we started and discovered that Tuscany is a land of endless possibilities, which led us to Roy Meroz. Roy is a pro who knows Tuscany inside out and was with us throughout the entire trip — from planning all the way until we landed back home. The communication, guidance, restaurant recommendations, and even remote help booking a table late at night reminded us that there is no substitute for close, attentive human support. We would do it again with you in a heartbeat.",
+        "author": "Aviv Koren",
+        "city": ""
+      },
+      {
+        "quote": "A warm recommendation! I had long dreamed of a trip to Italy, and my husband decided to make it happen. From the very first conversation with Roy it was clear we had found the right person. Roy and his sister Adi guided us with calm, warmth, and real professionalism — even accounting for traveling with a 15-month-old baby. Every detail was planned, from accommodation to the daily route to constant check-ins. Every day felt magical — wine tastings in Montalcino, hot springs, peaceful days in the Florentine countryside, and the incredible town of Volterra. Thank you Roy and Adi — it was a trip far beyond what we could have imagined.",
+        "author": "Ella Fridman-Waisberg",
+        "city": ""
+      },
+      {
+        "quote": "We visited multiple locations with complex logistics, some requiring long drives after landing in Rome. We started planning with Roy almost a year in advance, and he tailored the trip to us perfectly. Many last-minute changes during the trip were handled with detailed and pleasant responses. We even got to meet him in person in Florence. I warmly recommend him to anyone planning a trip to Italy.",
+        "author": "Sharon Cohen",
+        "city": ""
+      },
+      {
+        "quote": "After seeing many recommendations for Roy Meroz in a Tuscany travel group, we decided to reach out — and our intuition was absolutely right. Roy and Liead organized a trip that was so precise, invested and perfect. Every detail was felt, including parking at each location. The hotel and restaurant recommendations were outstanding. Throughout the trip we received fast responses and support, and they sent daily messages checking how we were doing. Because of you we had an unforgettable trip.",
+        "author": "Cochi Horesh",
+        "city": ""
+      },
+      {
+        "quote": "We are back from two wonderful weeks in Tuscany. I want to recommend Roy Meroz and his sister Adi, who we turned to when we felt overwhelmed by information. We received personal attention from the first call, help with all the technical details — bus from the airport, nearest parking, best museum tickets — and every small detail before and during the trip. On one stormy day when we were stuck in the car, Roy immediately sent us a nearby coffee shop to wait in. Everything is marked on a clear map and well explained. Thank you Roy and Adi!",
+        "author": "Galil Tzuri",
+        "city": ""
+      },
+      {
+        "quote": "A must recommendation! We just returned from our perfect trip to Tuscany, and it was truly all thanks to Roy Meroz who built us a dream itinerary and was available at any hour for any change we wanted to make. We managed to experience Tuscany on a much deeper level because of him. He knows everything and all the most authentic places.",
+        "author": "Yael Shiri",
+        "city": ""
+      }
+    ]
+  },
+  "cta": {
+    "label": "Ready to start?",
+    "headline1": "Tuscany is waiting.",
+    "headlineItalic": "Let's plan together.",
+    "sub": "Send a WhatsApp message and Roy will get back to you. No forms, no bureaucracy — just a real conversation.",
+    "whatsapp": "Contact on WhatsApp",
+    "waMsg": "Hi Roy, I'm interested in your trip planning service",
+    "secondary": "See packages & pricing",
+    "note": "+39 351-723-1156 | @Meroz_In_Toscana"
+  },
+  "footer": {
+    "tagline": "The Authentic Tuscany Experience",
+    "links": [
+      {
+        "label": "About Roy",
+        "href": "about"
+      },
+      {
+        "label": "Packages & Pricing",
+        "href": "services"
+      },
+      {
+        "label": "Why Us",
+        "href": "why"
+      },
+      {
+        "label": "Reviews",
+        "href": "reviews"
+      }
+    ],
+    "copyright": "© 2025 Meroz In Italia"
+  }
+}
