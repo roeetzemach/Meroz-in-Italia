@@ -1,14 +1,24 @@
-import createMiddleware from "next-intl/middleware";
-import { routing } from "./src/i18n/routing";
+import { NextRequest, NextResponse } from 'next/server';
 
-// This middleware intercepts all requests and routes them to the correct locale.
-// Hebrew (he) is the default — visiting / serves Hebrew automatically.
-// English is at /en.
-export default createMiddleware(routing);
+const locales = ['he', 'en'];
+const defaultLocale = 'he';
+
+export function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+
+  // Check if the URL already has a locale prefix (e.g. /he or /en)
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  if (pathnameHasLocale) return;
+
+  // Redirect to the default locale (Hebrew)
+  return NextResponse.redirect(
+    new URL(`/${defaultLocale}${pathname}`, request.url)
+  );
+}
 
 export const config = {
-  // Match all routes except Next.js internals and static files
-  matcher: [
-    "/((?!_next|_vercel|.*\\..*).*)",
-  ],
+  matcher: ['/((?!_next|_vercel|.*\\..*).*)'],
 };
