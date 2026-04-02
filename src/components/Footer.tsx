@@ -38,7 +38,7 @@ export default function Footer() {
             ))}
           </div>
           <div className="footer-contact">
-            <a href="tel:+393517231156" dir="ltr">📞 +39 351-723-1156</a>
+            <a href="tel:+393517231156" dir="ltr">📞 +39 351-723-1156 </a>
             <a href="https://wa.me/393517231156" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
             <a href="https://instagram.com/meroz_in_toscana" target="_blank" rel="noopener noreferrer">📷 @Meroz_In_Toscana</a>
           </div>
