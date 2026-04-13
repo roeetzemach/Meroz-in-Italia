@@ -201,23 +201,67 @@
   "footer": {
     "tagline": "The Authentic Tuscany Experience",
     "links": [
-      {
-        "label": "About Roy",
-        "href": "about"
-      },
-      {
-        "label": "Packages & Pricing",
-        "href": "services"
-      },
-      {
-        "label": "Why Us",
-        "href": "why"
-      },
-      {
-        "label": "Reviews",
-        "href": "reviews"
-      }
+      { "label": "About Roy", "href": "about" },
+      { "label": "Packages & Pricing", "href": "services" },
+      { "label": "Why Us", "href": "why" },
+      { "label": "Reviews", "href": "reviews" }
     ],
     "copyright": "© 2025 Meroz In Italia"
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "subtitle": "Welcome back",
+      "email": "Email address",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "loginButton": "Sign in",
+      "loading": "Loading...",
+      "orDivider": "or",
+      "googleButton": "Continue with Google",
+      "magicLinkButton": "Send me a login link",
+      "switchToMagicLink": "Prefer to sign in with an email link?",
+      "switchToPassword": "Back to password sign in",
+      "magicLinkSentTitle": "Check your inbox!",
+      "magicLinkSentBody": "We sent a login link to {email}. Click it to sign in.",
+      "magicLinkTryAgain": "Didn't receive it? Send again",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Sign up",
+      "backToHome": "Back to homepage",
+      "errors": {
+        "invalidCredentials": "Incorrect email or password. Please try again.",
+        "generic": "Something went wrong. Please try again.",
+        "callbackFailed": "Sign-in failed. Please try again."
+      }
+    },
+    "register": {
+      "title": "Create account",
+      "subtitle": "Start planning your Tuscany experience",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "phone": "Phone / WhatsApp",
+      "phoneOptional": "(optional)",
+      "password": "Password",
+      "passwordHint": "At least 8 characters",
+      "confirmPassword": "Confirm password",
+      "registerButton": "Create account",
+      "loading": "Loading...",
+      "orDivider": "or",
+      "googleButton": "Continue with Google",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Sign in",
+      "backToHome": "Back to homepage",
+      "successTitle": "Check your email",
+      "successHeading": "Almost there!",
+      "successBody": "We sent a confirmation link to {email}. Click it to complete your registration.",
+      "goToLogin": "Go to sign in",
+      "errors": {
+        "passwordMismatch": "Passwords do not match.",
+        "passwordTooShort": "Password must be at least 8 characters.",
+        "emailInUse": "This email address is already registered.",
+        "generic": "Something went wrong. Please try again."
+      }
+    }
   }
 }
