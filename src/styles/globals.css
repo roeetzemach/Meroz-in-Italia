@@ -5,7 +5,7 @@
    single @import — NOT @tailwind directives (those are v3 syntax and are
    silently ignored by the v4 PostCSS plugin).
    This must stay here, after the Google Fonts import, before :root.        */
-@import "tailwindcss";
+@import "tailwindcss/utilities";
 
 :root {
   --green:       #1D3D2A;
