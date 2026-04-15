@@ -159,7 +159,7 @@ export default function LoginPage() {
         <div className="auth-brand-overlay" aria-hidden="true" />
         <div className="auth-brand-content">
           <Image src="/logo.png" alt="Meroz In Italia" width={96} height={96}
-            style={{ borderRadius: '50%', marginBottom: '1.5rem' }} priority />
+            style={{ borderRadius: '50%', marginBottom: '1.5rem', background: '#F5EFE0', padding: '6px', boxShadow: '0 0 0 3px rgba(245,239,224,0.35)' }} priority />
           <div className="auth-brand-name">Meroz</div>
           <div className="auth-brand-italia-row">
             <div className="auth-brand-rule" />
