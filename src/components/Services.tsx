@@ -2,8 +2,15 @@
 
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 
 const WA_BASE = 'https://wa.me/393517231156?text=';
+
+// Stable IDs that map by index to the packages array in en.json / he.json.
+// These values are written to user metadata at signup so the CRM trigger
+// can record which service brought a lead in. ORDER MUST MATCH the
+// packages array in both translation files.
+const SERVICE_IDS = ['full_planning', 'consultation', 'existing_trip'] as const;
 
 interface Package {
   badge?: string;
@@ -25,8 +32,21 @@ interface Addon {
   price: string;
 }
 
-function ServiceCard({ pkg, index, howLabel }: { pkg: Package; index: number; howLabel: string }) {
+function ServiceCard({
+  pkg,
+  index,
+  howLabel,
+  waFallbackLabel,
+  locale,
+}: {
+  pkg: Package;
+  index: number;
+  howLabel: string;
+  waFallbackLabel: string;
+  locale: string;
+}) {
   const [open, setOpen] = useState(false);
+  const serviceId = SERVICE_IDS[index];
 
   return (
     <div className={`service-card fade-up d${index + 1}`}>
@@ -72,13 +92,33 @@ function ServiceCard({ pkg, index, howLabel }: { pkg: Package; index: number; ho
           </ol>
         </div>
         <div className="service-cta-row">
-          <a
+          {/* Primary CTA: route to register with service intent in URL.
+              Register page reads ?service= and stores it in sessionStorage
+              + user metadata so the CRM can attribute the lead. */}
+          <Link
             className="btn-primary-green"
+            href={`/${locale}/auth/register?service=${serviceId}`}
+          >
+            {pkg.cta}
+          </Link>
+          {/* Secondary low-friction option for users who'd rather skip signup.
+              Kept inline-styled for now; if you decide to keep it long-term,
+              move these styles to a .service-wa-fallback class in globals.css. */}
+          <a
             href={WA_BASE + encodeURIComponent(pkg.waMsg)}
             target="_blank"
             rel="noopener noreferrer"
+            style={{
+              display: 'block',
+              marginTop: '0.75rem',
+              fontSize: '0.85rem',
+              color: 'var(--brown)',
+              textAlign: 'center',
+              textDecoration: 'underline',
+              opacity: 0.75,
+            }}
           >
-            {pkg.cta}
+            {waFallbackLabel}
           </a>
         </div>
       </div>
@@ -92,6 +132,7 @@ export default function Services() {
   const howLabel = locale === 'he' ? 'איך זה עובד ←' : 'How it works ←';
   const packages = t.raw('packages') as Package[];
   const addons = t.raw('addons') as Addon[];
+  const waFallbackLabel = t('waFallback');
 
   return (
     <section className="services-section" id="services">
@@ -105,7 +146,14 @@ export default function Services() {
 
         <div className="services-grid">
           {packages.map((pkg, i) => (
-            <ServiceCard key={i} pkg={pkg} index={i} howLabel={howLabel} />
+            <ServiceCard
+              key={i}
+              pkg={pkg}
+              index={i}
+              howLabel={howLabel}
+              waFallbackLabel={waFallbackLabel}
+              locale={locale}
+            />
           ))}
         </div>
 

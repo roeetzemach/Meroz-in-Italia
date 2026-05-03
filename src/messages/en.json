@@ -1,7 +1,9 @@
 {
   "nav": {
     "langToggle": "עב",
-    "cta": "Let's Talk"
+    "cta": "Let's Talk",
+    "login": "Sign in",
+    "myAccount": "My Account"
   },
   "hero": {
     "eyebrow": "Roy Meroz — Living and breathing Tuscany",
@@ -29,6 +31,7 @@
     "headlineItalic": "works for you",
     "intro": "Not sure which fits? Send a message and Roy will walk you through all options. No commitment.",
     "howItWorks": "How it works ←",
+    "waFallback": "or message on WhatsApp",
     "packages": [
       {
         "badge": "Most Popular",
@@ -263,5 +266,12 @@
         "generic": "Something went wrong. Please try again."
       }
     }
+  },
+  "dashboard": {
+    "welcome": "Welcome, {name}",
+    "comingSoon": "Your client portal is coming soon",
+    "comingSoonBody": "We're building your personal area. Soon you'll see your meetings, trip plan status, files, and everything you need — right here.",
+    "signOut": "Sign out",
+    "backToHome": "Back to homepage"
   }
 }

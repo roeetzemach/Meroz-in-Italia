@@ -1,10 +1,16 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import Link from 'next/link'
 import Image from 'next/image'
 import { createClient } from '@/lib/supabase/client'
+
+// Whitelist matches Services.tsx. Anything else from the URL is silently
+// ignored — prevents arbitrary strings being injected into user metadata
+// via crafted register links.
+const VALID_SERVICES = ['full_planning', 'consultation', 'existing_trip'] as const;
+const SERVICE_STORAGE_KEY = 'pending_service';
 
 function GoogleIcon() {
   return (
@@ -30,8 +36,29 @@ export default function RegisterPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [registered, setRegistered] = useState(false)
+  const [serviceType, setServiceType] = useState<string | null>(null)
 
   const supabase = createClient()
+
+  // On mount: capture ?service= from the URL and persist to sessionStorage
+  // so it survives the Google OAuth round-trip (which strips options.data).
+  // If no URL param but a value was previously stashed (user came back to
+  // this page after abandoning OAuth), reload it so they don't lose intent.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const fromUrl = params.get('service');
+
+    if (fromUrl && (VALID_SERVICES as readonly string[]).includes(fromUrl)) {
+      sessionStorage.setItem(SERVICE_STORAGE_KEY, fromUrl);
+      setServiceType(fromUrl);
+      return;
+    }
+
+    const stashed = sessionStorage.getItem(SERVICE_STORAGE_KEY);
+    if (stashed && (VALID_SERVICES as readonly string[]).includes(stashed)) {
+      setServiceType(stashed);
+    }
+  }, []);
 
   async function handleRegister(e: React.FormEvent) {
     e.preventDefault()
@@ -41,19 +68,35 @@ export default function RegisterPage() {
     setIsLoading(true)
     const { error } = await supabase.auth.signUp({
       email, password,
-      options: { data: { first_name: firstName, last_name: lastName, phone: phone || null } },
+      options: {
+        data: {
+          first_name: firstName,
+          last_name: lastName,
+          phone: phone || null,
+          // Service intent is written to raw_user_meta_data here. The DB
+          // trigger handle_new_user() will be updated in a later chat to
+          // read this and write it to leads.service_type.
+          service_type: serviceType,
+        }
+      },
     })
     if (error) {
       setError(error.message.toLowerCase().includes('already registered') ? t('errors.emailInUse') : t('errors.generic'))
       setIsLoading(false)
       return
     }
+    // Service intent has been captured in user metadata — clear stash so
+    // it doesn't leak into a different signup later in the same browser.
+    sessionStorage.removeItem(SERVICE_STORAGE_KEY);
     setRegistered(true)
     setIsLoading(false)
   }
 
   async function handleGoogleRegister() {
     setIsLoading(true)
+    // Service intent is already in sessionStorage (set by the useEffect
+    // above). The OAuth callback handler will read it and write to leads
+    // — that wiring will be added in a later chat.
     const callbackUrl = `${window.location.origin}/${locale}/auth/callback`
     await supabase.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: callbackUrl } })
   }
